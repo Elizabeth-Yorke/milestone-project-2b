@@ -19,41 +19,41 @@ h1, h2, h3, h4, h5 {
 
 .color-scheme-ax {
     background-color: #1F0229;
-    color: yellow;
+    color: #FFFF00;
 }
 
 .color-scheme-ay {
-    background-color:yellow;
+    background-color:#FFFF00;
     color: #1F0229;
 }
 
 .color-scheme-bx {
     background-color: #084A5C;
-    color:aquamarine;
+    color: #7fffd4;
 }
 
 .color-scheme-by {
-    background-color: aquamarine;
+    background-color: #7fffd4;
     color: #084A5C;
 }
 
 .color-scheme-cx {
     background-color: #1F0229;
-    color: aquamarine;
+    color: #7fffd4;
 }
 
 .color-scheme-cy {
-    background-color:aquamarine;
+    background-color:#7fffd4;
     color: #1F0229;
 }
 
 .color-scheme-dx {
     background-color: #084A5C;
-    color:yellow;
+    color:#FFFF00;
 }
 
 .color-scheme-dy {
-    background-color: yellow;
+    background-color: #FFFF00;
     color: #084A5C;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
 /* -- Navbar -- */
 
 .navbar {
-    background-color:aquamarine !important;
+    background-color:#7fffd4 !important;
     font-family: 'Luckiest Guy', cursive !important;
     color: #084A5C !important;
 }
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 20px 0 10px 0;
     margin: 0;
-    color:yellow !important;
+    color:#FFFF00 !important;
 }
 
 .game-area {
@@ -104,6 +104,11 @@ h1, h2, h3, h4, h5 {
     width: 50px;
     text-align: center;
     font-size: 20px;
+}
+
+.icon {
+    color:#FFFF00 !important;
+    border-color: #FFFF00 !important;
 }
 
 /* -- Question Area -- */
@@ -134,7 +139,7 @@ h1, h2, h3, h4, h5 {
 
 #submit {
     background-color: #1F0229 !important;
-    color:yellow !important;
+    color:#FFFF00 !important;
 }
 
 /* -- Timer Area -- */
@@ -151,7 +156,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #TimerDisplayNovice {
-    background-color:yellow;
+    background-color:#FFFF00;
     color:#1F0229;
     padding: 5px;
     height: 100%;
@@ -161,7 +166,7 @@ h1, h2, h3, h4, h5 {
 
 #TimerDisplayIntermediate {
     background-color:#084A5C;
-    color:aquamarine;
+    color:#7fffd4;
     padding: 5px;
     height: 100%;
     width: 80%;
@@ -169,7 +174,7 @@ h1, h2, h3, h4, h5 {
 } 
 
 #TimerDisplayAdvanced {
-    background-color:yellow;
+    background-color:#FFFF00;
     color:#1F0229;
     padding: 5px;
     height: 100%;
@@ -193,12 +198,12 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-#score {
+#positive-score {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-#incorrect {
+#negative-score {
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -228,7 +233,7 @@ h1, h2, h3, h4, h5 {
 
 #reset {
     background-color:#084A5C !important;
-    color:aquamarine !important;
+    color:#7fffd4 !important;
     width: 150px;
     height: 50px;
 }

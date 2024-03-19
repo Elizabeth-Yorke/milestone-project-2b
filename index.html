@@ -21,7 +21,7 @@
 
 <!-- Page Title -->
 
-    <title>Maths Lines</title>
+    <title>Fast Maths</title>
 </head>
 
 <!-- Bootstrap Navbar -->
@@ -50,45 +50,47 @@
 
 <div class="row g-0">
     <div class="col-md-6 game-area color-scheme-ax">
-        <a class="navbar-brand" href="index.html"><h1 class="main-title">Fast Maths</h1></a>
+        <a class="navbar-brand" href="index.html"><h1 class="main-title">Mulitplication</h1></a>
+        <section>
 		<div class="controls-area">
-			<button id="questionA" data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel clickOn">
-				<i class="fa-solid fa-mug-hot icon"></i>
+			<button id="questionA" data-type="multiplication"  class="btn btn-outline-light btn-lg icon-panel clickOn">
+				<i class="fa-solid fa-bolt icon"></i>
 			</button>
 		</div>
-    </div>
+        </section>
 
 <!-- Question Area -->
 
-    <div class="col-md-6 color-scheme-ay">
         <section>
         <div class="question-area">
             <h3 id="question-title">Question</h3>
             <div id="question-div">
-            <span id="partA">0</span>
+            <span id="partA">0</span>                
             <span id="symbol">x</span>
             <span id="partB">0</span>
             <span>=</span>
-            <input id="answer-box" type="number" placeholder="Answer">
+            <input id="answer-box" type="number" placeholder="">
             <button id="submit" type="button" data-type="submit" class="btn btn-outline-dark clickOn" value="submit">Submit</button>
             </div>
         </div>
         </section>
+    </div>
 
 <!-- Timer -->
 
+    <div class="col-md-6 color-scheme-ay">
         <section>
-            <div class="row timer-row g-0">
-                <div class="col-md-4 timer-area color-scheme-ax">
-                    <button class="timer clickOn" id="timerDisplayNovice" data-type="timer"><h4>Novice</h4></button>
-                </div>
-                <div class="col-md-4 timer-area color-scheme-by">
-                    <button class="timer clickOn" id="timerDisplayIntermediate" data-type="timer"><h4>Adept</h4></button>
-                </div>
-                <div class="col-md-4 timer-area color-scheme-ax">
-                    <button class="timer clickOn" id="timerDisplayAdvanced" data-type="timer"><h4>Advanced</h4></button>
-                </div>
+        <div class="row timer-row g-0">
+            <div class="col-md-4 timer-area color-scheme-ax">
+                <button class="timer clickOn" id="timerDisplayNovice" data-type="timer"><h4>Novice</h4></button>
             </div>
+            <div class="col-md-4 timer-area color-scheme-by">
+                <button class="timer clickOn" id="timerDisplayIntermediate" data-type="timer"><h4>Adept</h4></button>
+            </div>
+            <div class="col-md-4 timer-area color-scheme-ax">
+                <button class="timer clickOn" id="timerDisplayAdvanced" data-type="timer"><h4>Advanced</h4></button>
+            </div>            
+        </div>
         </section>
 
 <!-- Scores -->
@@ -96,8 +98,8 @@
         <section>
             <div class="score-area color-scheme-ay">
                 <h3 id="scores-title">Scores</h3>
-                <p class="scores">Correct Answers <span id="score">0</span></p>
-                <p class="scores">Incorrect Answers<span id="incorrect">0</span></p>
+                <p class="scores">Correct Answers <span id="positive-score">0</span></p>
+                <p class="scores">Incorrect Answers<span id="negative-score">0</span></p>
             </div>
         </section>
     </div>
@@ -124,6 +126,6 @@
     </section>
 </footer>
 
-    <script src="assets/javascript/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

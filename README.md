@@ -17,9 +17,10 @@ Game 	phone 	tablet 	desktop
 Instructions 	phone 	tablet 	desktop
 Colour Scheme
 
-I used the UX Design section of Adobe Color [https://color.adobe.com/trends/Ui/ux] to identify the most current user friendly colour palates available. I also looked at their game design section of Adobe Colour [https://color.adobe.com/trends/Game-design]. I noticed that there was an abundance of purple based themes in both sections, so I chose a purple based colour palate. I then checked this palate using WebAIM contrast checker [https://webaim.org/resources/contrastchecker/], and made the shades lighter and darker to ensure I had a colour scheme that included a number of high contrast pairings. The palate was created by Adobe Colour and contained the following colours:
+I used the UX Design section of Adobe Color [https://color.adobe.com/trends/Ui/ux] to identify the most current user friendly colour palates available. I also looked at their game design section of Adobe Colour [https://color.adobe.com/trends/Game-design]. I noticed that there was an abundance of dark purple in both sections, so I chose a dark purple based colour palate. I then checked this palate using WebAIM contrast checker [https://webaim.org/resources/contrastchecker/], and made the shades lighter and darker to ensure I had a colour scheme that included a number of high contrast pairings. The palate was created by Adobe Colour and contained the following colours:
 
-#B6E7F5 - pale teal #54AFC7 - mid teal (not to be written on directly due to contrast issues) #084A5C - dark teal #1F0229 - dark purple #E8C4F5 - pale purple
+#7fffd4 - aquamarine  #084A5C - dark teal  #1F0229 - dark purple #FFFF00 - yellow
+
 Fonts
 
 I selected the fonts for this project from Google Fonts.
