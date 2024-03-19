@@ -1,11 +1,11 @@
 
-Maths Lines
+Fast Maths
 
-Welcome to Maths Lines. This is an interactive maths game. Each icon hides a maths question. To win the game, you need to answer four questions in a straight line correctly. Click on a circle to reveal your first question.
+Welcome to Fast Maths. This is an interactive maths game. 
 
 A live version of the site can be viewed from here.
 
-Here is a mock-up image of Maths Lines interactive game, using the "Am I Responsive" site.
+Here is a mock-up image of Speed Maths interactive game, using the "Am I Responsive" site.
 
 screenshot.
 UX
