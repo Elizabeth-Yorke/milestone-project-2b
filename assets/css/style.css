@@ -19,41 +19,41 @@ h1, h2, h3, h4, h5 {
 
 .color-scheme-ax {
     background-color:#1F0229;
-    color:#FFFF00;
+    color:#E8C4F5;
 }
 
 .color-scheme-ay {
-    background-color:#FFFF00;
+    background-color:#E8C4F5;
     color: #1F0229;
 }
 
 .color-scheme-bx {
     background-color: #084A5C;
-    color: #7fffd4;
+    color: #B6E7F5;
 }
 
 .color-scheme-by {
-    background-color: #7fffd4;
+    background-color: #B6E7F5;
     color: #084A5C;
 }
 
 .color-scheme-cx {
     background-color: #1F0229;
-    color: #7fffd4;
+    color: #B6E7F5;
 }
 
 .color-scheme-cy {
-    background-color:#7fffd4;
+    background-color:#B6E7F5;
     color: #1F0229;
 }
 
 .color-scheme-dx {
     background-color: #084A5C;
-    color:#FFFF00;
+    color:#E8C4F5;
 }
 
 .color-scheme-dy {
-    background-color: #FFFF00;
+    background-color:#E8C4F5;
     color: #084A5C;
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
 /* -- Navbar -- */
 
 .navbar {
-    background-color:#7fffd4 !important;
+    background-color:#B6E7F5 !important;
     font-family: 'Luckiest Guy', cursive !important;
     color: #084A5C !important;
 }
@@ -86,6 +86,10 @@ h1, h2, h3, h4, h5 {
     color:#084A5C;
 }
 
+#page3 {
+    color:#084A5C;
+}
+
 /* -- Game -- */
 /* -- Controls Area -- */
 
@@ -93,7 +97,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 20px 0 10px 0;
     margin: 0;
-    color:#FFFF00 !important;
+    color:#E8C4F5 !important;
 }
 
 .game-area {
@@ -111,8 +115,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .icon {
-    color:#FFFF00 !important;
-    border-color: #FFFF00 !important;
+    color:#E8C4F5 !important;
+    border-color: #E8C4F5 !important;
 }
 
 /* -- Question Area -- */
@@ -143,7 +147,7 @@ h1, h2, h3, h4, h5 {
 
 #submit {
     background-color: #1F0229 !important;
-    color:#FFFF00 !important;
+    color:#E8C4F5 !important;
 }
 
 /* -- Timer Area -- */
@@ -160,7 +164,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .novice-timer {
-    background-color:#FFFF00;
+    background-color:#E8C4F5;
     color:#1F0229;
     padding: 5px;
     height: 100%;
@@ -170,7 +174,7 @@ h1, h2, h3, h4, h5 {
 
 .adept-timer {
     background-color:#084A5C;
-    color:#7fffd4;
+    color:#B6E7F5;
     padding: 5px;
     height: 100%;
     width: 80%;
@@ -178,7 +182,7 @@ h1, h2, h3, h4, h5 {
 } 
 
 .advanced-timer {
-    background-color:#FFFF00;
+    background-color:#E8C4F5;
     color:#1F0229;
     padding: 5px;
     height: 100%;
@@ -237,14 +241,14 @@ h1, h2, h3, h4, h5 {
 
 #reset {
     background-color:#084A5C !important;
-    color:#7fffd4 !important;
+    color:#B6E7F5 !important;
     width: 150px;
     height: 50px;
 }
 
 #add-reset {
     background-color:#084A5C !important;
-    color:#7fffd4 !important;
+    color:#B6E7F5 !important;
     width: 150px;
     height: 50px;
 }
@@ -262,7 +266,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /* -- Addition Page -- */
-
 /* -- Question and Answer Section -- */
 
 #add-answer-box{
@@ -276,7 +279,24 @@ h1, h2, h3, h4, h5 {
 
 #addition-submit{
     background-color: #1F0229 !important;
-    color:#FFFF00 !important;
+    color:#E8C4F5 !important;
+}
+
+/* -- Subtraction Page -- */
+/* -- Question and Answer Section -- */
+
+#subtract-answer-box{
+    
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    height: 40px;
+    width: 120px;
+}
+
+#subtract-submit{
+    background-color: #1F0229 !important;
+    color:#E8C4F5 !important;
 }
 
 /* -- Instructions Page -- */
@@ -284,11 +304,13 @@ h1, h2, h3, h4, h5 {
 
 #instructions-title {
     padding: 0 20px 0 20px;
+    text-align: center;
 }
 
 .instructions {
     padding: 0 20px 20px 20px;
     margin: 0;
+    text-align: center;
 }
 
 /* -- Examples -- */
@@ -312,22 +334,26 @@ h1, h2, h3, h4, h5 {
 
 .timer-subtitle {
     padding: 20px 20px 0 20px;
+    text-align: center;
 }
 
 .timer-script {
     padding: 0 20px 20px 20px;
     margin: 0;
+    text-align: center;
 }
 
 /* -- Restart -- */
 
 #restart {
     padding: 20px 20px 0 20px;
+    text-align: center;
 }
 
 .restart-text {
     padding: 0 20px 20px 20px;
     margin: 0;
+    text-align: center;
 }
 
 /* -- Enjoy -- */

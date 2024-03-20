@@ -16,10 +16,24 @@ document.addEventListener("DOMContentLoaded", function(){
                 startTimer(); 
             } else if (this.getAttribute("data-type") === "multiplication") {
                 runMultiplicationGame();
+            } else if (this.getAttribute("data-type") === "add-reset") {
+                document.getElementById("addition-answer-box").value = '';
+                location.reload();
+            } else if (this.getAttribute("data-type") === "addition-timer") {
+                startAddTimer(); 
             } else if (this.getAttribute("data-type") === "addition-submit") {
                 checkAdditionAnswer();
             } else if (this.getAttribute("data-type") === "addition") {
-                runAdditionGame(); 
+                runAdditionGame();
+            } else if (this.getAttribute("data-type") === "subtract-reset") {
+                document.getElementById("subtract-answer-box").value = '';
+                location.reload();
+            } else if (this.getAttribute("data-type") === "subtract-timer") {
+                startSubtractTimer(); 
+            } else if (this.getAttribute("data-type") === "subtract-submit") {
+                checkSubtractAnswer();
+            } else if (this.getAttribute("data-type") === "subtract") {
+                runSubtractGame();
         }
     })
 }
@@ -97,7 +111,7 @@ function increaseNegativeScore() {
  */
 
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    let timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
@@ -122,7 +136,7 @@ function startTimer(duration, display) {
  */
 
 timerDisplayNovice.onclick = function () {
-    var time = 80, // time in seconds here
+    let time = 80, // time in seconds here
         display = document.querySelector('#timerDisplayNovice');
     startTimer(time, display);
 };
@@ -132,7 +146,7 @@ timerDisplayNovice.onclick = function () {
  */
 
 timerDisplayIntermediate.onclick = function () {
-    var time = 40, // time in seconds here
+    let time = 40, // time in seconds here
         display = document.querySelector('#timerDisplayIntermediate');
     startTimer(time, display);
 };
@@ -142,7 +156,7 @@ timerDisplayIntermediate.onclick = function () {
  */
 
 timerDisplayAdvanced.onclick = function () {
-    var time = 20, // time in seconds here
+    let time = 20, // time in seconds here
         display = document.querySelector('#timerDisplayAdvanced');
     startTimer(time, display);
 };
@@ -164,107 +178,118 @@ function runAdditionGame() {
     
     }
     
-    /**
-     * Compares the users answer with the return from calculateCorrectAnswer()
-     * Selects function to increase correct score.
-     */
+/**
+ * Compares the users answer with the return from calculateCorrectAnswer()
+ * Selects function to increase correct score.
+ */
     
-    function checkAdditionAnswer() {
-        let userAnswer = parseInt(document.getElementById("add-answer-box").value);
-        let calculatedAnswer = calculateCorrectAddAnswer();
-        let userRight = userAnswer === calculatedAnswer[0];
+function checkAdditionAnswer() {
+    let userAnswer = parseInt(document.getElementById("add-answer-box").value);
+    let calculatedAnswer = calculateCorrectAddAnswer();
+    let userRight = userAnswer === calculatedAnswer[0];
     
-        if (userRight) {
-            increasePositiveAddScore();
-        } else {
-            increaseNegativeAddScore();
-        }
-        document.getElementById("add-answer-box").value = '';
-        runAdditionGame(calculatedAnswer[1]);
+    if (userRight) {
+        increasePositiveAddScore();
+    } else {
+        increaseNegativeAddScore();
+    }
+    document.getElementById("add-answer-box").value = '';
+    runAdditionGame(calculatedAnswer[1]);
+    
+}
+    
+/**
+ * Gets the number parts directly from the DOM
+ * Returns the correct answer
+ */
+    
+function calculateCorrectAddAnswer() {
+    let partA = parseInt(document.getElementById('addPartA').innerText);
+    let partB = parseInt(document.getElementById('addPartB').innerText);    
+    return [partA + partB, "addition"];
+}
+    
+/**
+ * Gets the current score from the DOM and adds 1.
+ */
+    
+function increasePositiveAddScore() {
+    let oldScore = parseInt(document.getElementById("add-positive-score").innerText);
+    document.getElementById("add-positive-score").innerText = ++oldScore;
+}
+    
+/**
+ * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
+    
+function increaseNegativeAddScore() {
+    let oldScore = parseInt(document.getElementById("add-negative-score").innerText);
+    document.getElementById("add-negative-score").innerText = ++oldScore;
+}
+
+// SUBTRACTION PAGE
+
+/**
+* Generates random integers between 1 and 12.
+* Creates subtraction questions.
+*/
+
+function runSubtractGame() {
+
+    let addNumber1 = Math.floor(Math.random() * 11)+1;
+    let addNumber2 = Math.floor(Math.random() * 11)+1;
+    
+    document.getElementById('subtractPartA').textContent = addNumber1;
+    document.getElementById('subtractPartB').textContent = addNumber2;
     
     }
     
-    /**
-     * Gets the number parts directly from the DOM
-     * Returns the correct answer
-     */
+/**
+ * Compares the users answer with the return from calculateCorrectAnswer()
+ * Selects function to increase correct score.
+ */
     
-    function calculateCorrectAddAnswer() {
-        let partA = parseInt(document.getElementById('addPartA').innerText);
-        let partB = parseInt(document.getElementById('addPartB').innerText);
-        
-        return [partA + partB, "addition"];
+function checkSubtractAnswer() {
+    let userAnswer = parseInt(document.getElementById("subtract-answer-box").value);
+    let calculatedAnswer = calculateCorrectSubtractAnswer();
+    let userRight = userAnswer === calculatedAnswer[0];
+    
+    if (userRight) {
+        increasePositiveSubtractScore();
+    } else {
+        increaseNegativeSubtractScore();
     }
+    document.getElementById("subtract-answer-box").value = '';
+    runSubtractGame(calculatedAnswer[1]);
     
-    /**
-     * Gets the current score from the DOM and adds 1.
-     */
+}
     
-    function increasePositiveAddScore() {
-        let oldScore = parseInt(document.getElementById("add-positive-score").innerText);
-        document.getElementById("add-positive-score").innerText = ++oldScore;
-    }
+/**
+ * Gets the number parts directly from the DOM
+ * Returns the correct answer
+ */
     
-    /**
-     * Gets the current tally of incorrect answers from the DOM and increments it by 1
-     */
+function calculateCorrectAddAnswer() {
+    let partA = parseInt(document.getElementById('subtractPartA').innerText);
+    let partB = parseInt(document.getElementById('subtractPartB').innerText);    
+    return [subtractpartA + subtractpartB, "subtract"];
+}
     
-    function increaseNegativeAddScore() {
-        let oldScore = parseInt(document.getElementById("add-negative-score").innerText);
-        document.getElementById("add-negative-score").innerText = ++oldScore;
-    }
+/**
+ * Gets the current score from the DOM and adds 1.
+ */
     
-    /**
-     * Timer to counts down to 0.
-     */
+function increasePositiveSubtractScore() {
+    let oldScore = parseInt(document.getElementById("subtract-positive-score").innerText);
+    document.getElementById("subtract-positive-score").innerText = ++oldScore;
+}
     
-    function startAddTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10)
-            seconds = parseInt(timer % 60, 10);
+/**
+ * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
     
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-            display.textContent = minutes + ":" + seconds;
-    
-            if (--timer < 0) {
-                timer = 0;
-                let positiveScore = document.getElementById("add-positive-score").innerText;
-                let negativeScore = document.getElementById("add-negative-score").innerText;
-                alert(`Your time is up! You got ${positiveScore} right and ${negativeScore} wrong.`);
-                location.reload();
-            }
-        }, 1000);
-    }
-    
-    /**
-     * Novice Timer to start at 80seconds on click
-     */
-    
-    noviceTimerAdd.onclick = function () {
-        var time = 80, // time in seconds here
-            display = document.querySelector('#noviceTimerAdd');
-        startAddTimer(time, display);
-    };
-    
-    /**
-     * Intermediate Timer to start at 40 seconds on click
-     */
-    
-    adeptTimerAdd.onclick = function () {
-        var time = 40, // time in seconds here
-            display = document.querySelector('#adeptTimerAdd');
-            startAddTimer(time, display);
-    };
-    
-    /**
-     * Advanced Timer to start at 20 seconds on click
-     */
-    
-    advancedTimerAdd.onclick = function () {
-        var time = 20, // time in seconds here
-            display = document.querySelector('#advancedTimerAdd');
-        startAddTimer(time, display);
-    };
+function increaseNegativeSubtractScore() {
+    let oldScore = parseInt(document.getElementById("subtract-negative-score").innerText);
+    document.getElementById("subtract-negative-score").innerText = ++oldScore;
+}
+
