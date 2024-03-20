@@ -16,15 +16,33 @@ document.addEventListener("DOMContentLoaded", function(){
                 startTimer(); 
             } else if (this.getAttribute("data-type") === "multiplication") {
                 runMultiplicationGame();
-                if (this.getAttribute("data-type") === "add-submit") {
-                    checkAddAnswer();
-                } else if (this.getAttribute("data-type") === "add-reset") {
-                    document.getElementById("add-answer-box").value = '';
-                    location.reload();
-                } else if (this.getAttribute("data-type") === "add-timer") {
-                    startAddTimer(); 
-                } else if (this.getAttribute("data-type") === "addiition") {
-                    runAddGame();
+            } else if (this.getAttribute("data-type") === "add-submit") {
+                checkAddAnswer();
+            } else if (this.getAttribute("data-type") === "add-reset") {
+                document.getElementById("add-answer-box").value = '';
+                location.reload();
+            } else if (this.getAttribute("data-type") === "add-timer") {
+                startAddTimer(); 
+            } else if (this.getAttribute("data-type") === "addition") {
+                runAddGame();
+            } else if (this.getAttribute("data-type") === "subtract-submit") {
+                checkSubtractAnswer();
+            } else if (this.getAttribute("data-type") === "subtract-reset") {
+                document.getElementById("subtract-answer-box").value = '';
+                location.reload();
+            } else if (this.getAttribute("data-type") === "subtract-timer") {
+                startSubtractTimer(); 
+            } else if (this.getAttribute("data-type") === "subtraction") {
+                runSubtractGame();
+            } else if (this.getAttribute("data-type") === "divide-submit") {
+                checkDivideAnswer();
+            } else if (this.getAttribute("data-type") === "divide-reset") {
+                document.getElementById("divide-answer-box").value = '';
+                location.reload();
+            } else if (this.getAttribute("data-type") === "divide-timer") {
+                startDivideTimer(); 
+            } else if (this.getAttribute("data-type") === "division") {
+                runDivideGame();
         }
     })
 }
@@ -227,11 +245,11 @@ function increaseNegativeAddScore() {
 
 function runSubtractGame() {
 
-    let addNumber1 = Math.floor(Math.random() * 11)+1;
-    let addNumber2 = Math.floor(Math.random() * 11)+1;
+    let subtractNumber1 = Math.floor(Math.random() * 11)+1;
+    let subtractNumber2 = Math.floor(Math.random() * 11)+1;
     
-    document.getElementById('subtractPartA').textContent = addNumber1+addNumber2;
-    document.getElementById('subtractPartB').textContent = addNumber2;
+    document.getElementById('subtractPartA').textContent = subtractNumber1+subtractNumber2;
+    document.getElementById('subtractPartB').textContent = subtractNumber2;
     
     }
     
@@ -260,7 +278,7 @@ function checkSubtractAnswer() {
  * Returns the correct answer
  */
     
-function calculateCorrectAddAnswer() {
+function calculateCorrectSubtractAnswer() {
     let subtractPartA = parseInt(document.getElementById('subtractPartA').innerText);
     let subtractPartB = parseInt(document.getElementById('subtractPartB').innerText);    
     return [subtractPartA - subtractPartB, "subtract"];
@@ -282,5 +300,71 @@ function increasePositiveSubtractScore() {
 function increaseNegativeSubtractScore() {
     let oldScore = parseInt(document.getElementById("subtract-negative-score").innerText);
     document.getElementById("subtract-negative-score").innerText = ++oldScore;
+}
+
+// DIVISION PAGE
+
+/**
+* Generates random integers between 1 and 12.
+* Creates division questions.
+*/
+
+function runDivideGame() {
+
+    let divideNumber1 = Math.floor(Math.random() * 11)+1;
+    let divideNumber2 = Math.floor(Math.random() * 11)+1;
+    
+    document.getElementById('dividePartA').textContent = divideNumber1*divideNumber2;
+    document.getElementById('dividePartB').textContent = divideNumber2;
+    
+    }
+    
+/**
+ * Compares the users answer with the return from calculateCorrectAnswer()
+ * Selects function to increase correct score.
+ */
+    
+function checkDivideAnswer() {
+    let userAnswer = parseInt(document.getElementById("divide-answer-box").value);
+    let calculatedAnswer = calculateCorrectDivideAnswer();
+    let userRight = userAnswer === calculatedAnswer[0];
+    
+    if (userRight) {
+        increasePositiveDivideScore();
+    } else {
+        increaseNegativeDivideScore();
+    }
+    document.getElementById("divide-answer-box").value = '';
+    runDivideGame(calculatedAnswer[1]);
+    
+}
+    
+/**
+ * Gets the number parts directly from the DOM
+ * Returns the correct answer
+ */
+    
+function calculateCorrectDivideAnswer() {
+    let dividePartA = parseInt(document.getElementById('dividePartA').innerText);
+    let dividePartB = parseInt(document.getElementById('dividePartB').innerText);    
+    return [dividePartA / dividePartB, "divide"];
+}
+    
+/**
+ * Gets the current score from the DOM and adds 1.
+ */
+    
+function increasePositiveDivideScore() {
+    let oldScore = parseInt(document.getElementById("divide-positive-score").innerText);
+    document.getElementById("divide-positive-score").innerText = ++oldScore;
+}
+    
+/**
+ * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
+    
+function increaseNegativeSubtractScore() {
+    let oldScore = parseInt(document.getElementById("divide-negative-score").innerText);
+    document.getElementById("divide-negative-score").innerText = ++oldScore;
 }
 
