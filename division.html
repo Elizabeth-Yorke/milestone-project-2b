@@ -39,13 +39,13 @@
                 <a class="nav-link" id="page1" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="page2" aria-current="page" href="addition.html">Addition</a>
+                <a class="nav-link" id="page2" href="addition.html">Addition</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="page3" aria-current="page" href="subtraction.html">Subtraction</a>
+                <a class="nav-link" id="page3" href="subtraction.html">Subtraction</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="page4" href="division.html">Division</a>
+                <a class="nav-link active" id="page4" aria-current="page" href="division.html">Division</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="page5" href="instructions.html">Instructions</a>
@@ -59,10 +59,10 @@
 
 <div class="row g-0">
     <div class="col-md-6 game-area color-scheme-ax">
-        <a class="navbar-brand" href="index.html"><h1 class="main-title">Speed Subtraction</h1></a>
+        <a class="navbar-brand" href="index.html"><h1 class="main-title">Speed Division</h1></a>
         <section>
 		<div class="controls-area">
-			<button id="questionC" data-type="subtract"  class="btn btn-outline-light btn-lg icon-panel clickOn">
+			<button id="questionD" data-type="division"  class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-bolt icon"></i>
 			</button>
 		</div>
@@ -74,12 +74,12 @@
         <div class="question-area">
             <h3 class="question-title">Question</h3>
             <div class="question-div">
-            <span id="subtractPartA">0</span>
-            <span>-</span>
-            <span id="subtractPartB">0</span>
+            <span id="partA">0</span>                
+            <span>/</span>
+            <span id="partB">0</span>
             <span>=</span>
-            <input id="subtract-answer-box" type="number" placeholder="">
-            <button id="subtract-submit" type="button" data-type="subtract-submit" class="btn btn-outline-dark clickOn" value="submit">Submit</button>
+            <input id="answer-box" type="number" placeholder="">
+            <button id="submit" type="button" data-type="submit" class="btn btn-outline-dark clickOn" value="submit">Submit</button>
             </div>
         </div>
         </section>
@@ -91,13 +91,13 @@
         <section>
         <div class="row timer-row g-0">
             <div class="col-md-4 timer-area color-scheme-ax">
-                <button class="timer clickOn novice-timer" id="noviceTimerSubtract" data-type="subtract-timer"><h4>Novice</h4></button>
+                <button class="timer clickOn novice-timer" id="timerDisplayNovice" data-type="timer"><h4>Novice</h4></button>
             </div>
             <div class="col-md-4 timer-area color-scheme-by">
-                <button class="timer clickOn adept-timer" id="adeptTimerSubtract" data-type="subtract-timer"><h4>Adept</h4></button>
+                <button class="timer clickOn adept-timer" id="timerDisplayIntermediate" data-type="timer"><h4>Adept</h4></button>
             </div>
             <div class="col-md-4 timer-area color-scheme-ax">
-                <button class="timer clickOn advanced-timer" id="advancedTimerSubtract" data-type="subtract-timer"><h4>Advanced</h4></button>
+                <button class="timer clickOn advanced-timer" id="timerDisplayAdvanced" data-type="timer"><h4>Advanced</h4></button>
             </div>            
         </div>
         </section>
@@ -107,8 +107,8 @@
         <section>
             <div class="score-area color-scheme-ay">
                 <h3 class="scores-title">Scores</h3>
-                <p class="scores">Correct Answers <span class="positive-score" id="subtract-positive-score">0</span></p>
-                <p class="scores">Incorrect Answers<span class="negative-score" id="subtract-negative-score">0</span></p>
+                <p class="scores">Correct Answers <span class="positive-score" id="positive-score">0</span></p>
+                <p class="scores">Incorrect Answers<span class="negative-score" id="negative-score">0</span></p>
             </div>
         </section>
     </div>
@@ -122,7 +122,7 @@
             <p class="review">Review Us</p>
             <div class="stars"><i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star2"></i></i><i class="fa-solid fa-star star3"></i><i class="fa-solid fa-star star4"></i><i class="fa-solid fa-star star5"></i></div>
         </div>
-        <div class="col-md-3 color-scheme-by reset"><button id="subtract-reset" type="button" data-type="reset" class="btn btn-outline-dark clickOn reset" value="submit">Reset Game</button></div>
+        <div class="col-md-3 color-scheme-by reset"><button id="reset" type="button" data-type="reset" class="btn btn-outline-dark clickOn reset" value="submit">Reset Game</button></div>
         <div class="col-md-3 footer-top copyright color-scheme-bx">Copyright 2024 <i class="fa-regular fa-copyright"></i></div>
         <div class="col-md-3 footer-top social media color-scheme-by">
             <p>Share your progress</p>

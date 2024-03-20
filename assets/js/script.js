@@ -16,24 +16,15 @@ document.addEventListener("DOMContentLoaded", function(){
                 startTimer(); 
             } else if (this.getAttribute("data-type") === "multiplication") {
                 runMultiplicationGame();
-            } else if (this.getAttribute("data-type") === "add-reset") {
-                document.getElementById("addition-answer-box").value = '';
-                location.reload();
-            } else if (this.getAttribute("data-type") === "addition-timer") {
-                startAddTimer(); 
-            } else if (this.getAttribute("data-type") === "addition-submit") {
-                checkAdditionAnswer();
-            } else if (this.getAttribute("data-type") === "addition") {
-                runAdditionGame();
-            } else if (this.getAttribute("data-type") === "subtract-reset") {
-                document.getElementById("subtract-answer-box").value = '';
-                location.reload();
-            } else if (this.getAttribute("data-type") === "subtract-timer") {
-                startSubtractTimer(); 
-            } else if (this.getAttribute("data-type") === "subtract-submit") {
-                checkSubtractAnswer();
-            } else if (this.getAttribute("data-type") === "subtract") {
-                runSubtractGame();
+                if (this.getAttribute("data-type") === "add-submit") {
+                    checkAddAnswer();
+                } else if (this.getAttribute("data-type") === "add-reset") {
+                    document.getElementById("add-answer-box").value = '';
+                    location.reload();
+                } else if (this.getAttribute("data-type") === "add-timer") {
+                    startAddTimer(); 
+                } else if (this.getAttribute("data-type") === "addiition") {
+                    runAddGame();
         }
     })
 }
@@ -168,7 +159,7 @@ timerDisplayAdvanced.onclick = function () {
 * Creates addition questions.
 */
 
-function runAdditionGame() {
+function runAddGame() {
 
     let addNumber1 = Math.floor(Math.random() * 11)+1;
     let addNumber2 = Math.floor(Math.random() * 11)+1;
@@ -183,7 +174,7 @@ function runAdditionGame() {
  * Selects function to increase correct score.
  */
     
-function checkAdditionAnswer() {
+function checkAddAnswer() {
     let userAnswer = parseInt(document.getElementById("add-answer-box").value);
     let calculatedAnswer = calculateCorrectAddAnswer();
     let userRight = userAnswer === calculatedAnswer[0];
@@ -194,7 +185,7 @@ function checkAdditionAnswer() {
         increaseNegativeAddScore();
     }
     document.getElementById("add-answer-box").value = '';
-    runAdditionGame(calculatedAnswer[1]);
+    runAddGame(calculatedAnswer[1]);
     
 }
     
@@ -239,7 +230,7 @@ function runSubtractGame() {
     let addNumber1 = Math.floor(Math.random() * 11)+1;
     let addNumber2 = Math.floor(Math.random() * 11)+1;
     
-    document.getElementById('subtractPartA').textContent = addNumber1;
+    document.getElementById('subtractPartA').textContent = addNumber1+addNumber2;
     document.getElementById('subtractPartB').textContent = addNumber2;
     
     }
@@ -270,9 +261,9 @@ function checkSubtractAnswer() {
  */
     
 function calculateCorrectAddAnswer() {
-    let partA = parseInt(document.getElementById('subtractPartA').innerText);
-    let partB = parseInt(document.getElementById('subtractPartB').innerText);    
-    return [subtractpartA + subtractpartB, "subtract"];
+    let subtractPartA = parseInt(document.getElementById('subtractPartA').innerText);
+    let subtractPartB = parseInt(document.getElementById('subtractPartB').innerText);    
+    return [subtractPartA - subtractPartB, "subtract"];
 }
     
 /**

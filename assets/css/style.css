@@ -86,7 +86,11 @@ h1, h2, h3, h4, h5 {
     color:#084A5C;
 }
 
-#page3 {
+#page4 {
+    color:#084A5C;
+}
+
+#page5 {
     color:#084A5C;
 }
 
@@ -277,7 +281,7 @@ h1, h2, h3, h4, h5 {
     width: 120px;
 }
 
-#addition-submit{
+#add-submit{
     background-color: #1F0229 !important;
     color:#E8C4F5 !important;
 }
