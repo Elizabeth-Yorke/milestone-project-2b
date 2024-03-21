@@ -1,5 +1,5 @@
 
-Fast Maths
+# Fast Maths
 
 Welcome to Fast Maths. This is an interactive maths game. 
 
@@ -8,20 +8,22 @@ A live version of the site can be viewed from here.
 Here is a mock-up image of Speed Maths interactive game, using the "Am I Responsive" site.
 
 screenshot.
-UX
-Wireframes
+
+## UX Design
+### Wireframes
 
 My wireframe was created using Balsamiq. Here are screenshots of the wireframes:
-Page 	Phone Wireframe 	Tablet Wireframe 	Desktop Wireframe
-Game 	phone 	tablet 	desktop
-Instructions 	phone 	tablet 	desktop
-Colour Scheme
+| Page | Phone Wireframe | Tablet Wireframe | Desktop Wireframe |
+| --- | --- | --- | --- |
+
+
+### Colour Scheme
 
 I used the UX Design section of Adobe Color [https://color.adobe.com/trends/Ui/ux] to identify the most current user friendly colour palates available. I also looked at their game design section of Adobe Colour [https://color.adobe.com/trends/Game-design]. I noticed that there was an abundance of dark purple in both sections, so I chose a dark purple based colour palate. I then checked this palate using WebAIM contrast checker [https://webaim.org/resources/contrastchecker/], and made the shades lighter and darker to ensure I had a colour scheme that included a number of high contrast pairings. The palate was created by Adobe Colour and contained the following colours:
 
 #7fffd4 - aquamarine  #084A5C - dark teal  #1F0229 - dark purple #FFFF00 - yellow
 
-Fonts
+### Fonts
 
 I selected the fonts for this project from Google Fonts.
 
@@ -32,64 +34,66 @@ The font used for the numbers needs to be really clear to read, but still eyecat
 On the other hand, the font used for the explanation needs to be very easy to read, or users won't bother to read it! I chose Quicksand for this purpose.
 
 Whilst looking through fonts, I discovered Noto Color Emoji font, which I decided to use for my game graphics.
-User Stories
+
+## User Stories
 
 User stories can be found below:
-New site users
 
-    I would like a game with simple instructions that are easy to follow.
-    I would like a game that is quick to play.
-    I would like instant feedback so I know if I'm getting things right or wrong.
+### New site users
 
-Returning site users
+    - I would like a game with simple instructions that are easy to follow. 
+    - I would like a game that is quick to play.
+    - I would like instant feedback so I know if I'm getting things right or wrong.
 
-    I would like a game that feels like I'm using my brain a bit, but isn't too hard.
-    I would like a game in which I can see myself improving as I play more.
-    I would like there to be new questions every time I play.
+### Returning site users
 
-Site Owner
+    - I would like a game that feels like I'm using my brain a bit, but isn't too hard.
+    - I would like a game in which I can see myself improving as I play more.
+    - I would like there to be new questions every time I play.
 
-    I would like people to want to use this game.
-    I would like people to leave good reviews about this game.
-    I would like this game to respond smoothly.
+### Site Owner
 
-Features
-Existing Features
+    - I would like people to want to use this game.
+    - I would like people to leave good reviews about this game.
+    - I would like this game to respond smoothly.
 
-Navigation bar with links A main navigation menu.
+## Features
+### Existing Features
 
-A structured Layout TBC
+    - Collapsable navigation bar with links.
+    - Structured layout.
+    - Every logo links to homepage.
+    - Social links in footer.
+    - Choice of levels, via buttons that set appropriate timers.
+    - Positive and negative score boards to monitor your progress as you go.
+    - Reset button at base of page.
+    - Favicon.
+    - Customised 404 page.
 
-Logo links to homepage Every logo (title) that you see can be clicked on and will return you to the homepage.
+### Future Additions
 
-Social links There are links to Facebook, Instagram, Twitter and page in the footer of every page, to encourage people to share their love of the game.
+    - A scoreboard recording the best ever scores by other people, so you can try to beat it.
+    - An addition page.
+    - A subtraction page.
+    - A division page.
+    - A mixed questions page.
+    - A page with a grid of questions where you have to try to get 4 in a line.
+    - A page with more complex questions users could chose to have questions that include negative numbers, larger numbers, decimal numbers, or even questions from different topics.
 
-Timer There is a timer to let the user alter the difficulty of the game by setting themself a time limit in which to complete the game.
-
-Scoreboard The scoreboard records the fastest time in which you have completed the game.
-
-Favicon Just a little extra to make the website feel more professional.
-
-Customised 404 page To help customers feel valued even if something goes wrong on the website.
-Future Additions
-
-A Leader Board A scoreboard recording the best ever scores by other people, so you can try to beat it.
-
-Advanced game options A larger board A larger board in which the user has to complete a longer line.
-
-More Complex Questions Users could chose to have questions that include negative numbers, larger numbers, decimal numbers, or even questions from different topics.
-Testing
+## Testing
 
 Please find details of testing on a separate page TESTING.md.
-Improvements Made After Initial Testing Phase
+
+### Improvements Made After Initial Testing Phase
 
 TBC
-Technologies Used
 
-    HTML was used for the main site content.
-    CSS was used for the main site design and layout.
-    [JavaScript] (https://en.wikipedia.org/wiki/JavaScript) was used for the game interactivity.
-    Git was used for version control.
+## Technologies Used
+
+    HTML was used for the main site content. [https://en.wikipedia.org/wiki/HTML]
+    CSS was used for the main site design and layout. [https://en.wikipedia.org/wiki/CSS]
+    JavaScript was used for the game interactivity. [https://en.wikipedia.org/wiki/JavaScript]
+    Git was used for version control. []
     GitHub was used for version control.
     GitHub Pages was used to host the deployed front-end site.
     Bootstrap was used as a framework for modern responsiveness and pre-built components.

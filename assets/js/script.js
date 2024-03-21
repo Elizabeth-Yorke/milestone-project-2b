@@ -1,19 +1,21 @@
 /**
  * Adds event listeners to clickOn elements and assigns functions according to data-type.
  */
+let timers;
 
 document.addEventListener("DOMContentLoaded", function(){
     let clickOns = document.getElementsByClassName("clickOn");
-
+    console.log("clickOns", clickOns);
     for (let clickOn of clickOns){
         clickOn.addEventListener("click", function(){
+            console.log("clickOn id", clickOn.id);
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             } else if (this.getAttribute("data-type") === "reset") {
                 document.getElementById("answer-box").value = '';
                 location.reload();
             } else if (this.getAttribute("data-type") === "timer") {
-                startTimer(); 
+                startTimer(clickOn.id); 
             } else if (this.getAttribute("data-type") === "multiplication") {
                 runMultiplicationGame();
             } else if (this.getAttribute("data-type") === "add-submit") {
@@ -57,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function runMultiplicationGame() {
 
-let firstNumber = Math.floor(Math.random() * 11)+1;
-let secondNumber = Math.floor(Math.random() * 11)+1;
+    let firstNumber = Math.floor(Math.random() * 11)+1;
+    let secondNumber = Math.floor(Math.random() * 11)+1;
 
-document.getElementById('partA').textContent = firstNumber;
-document.getElementById('partB').textContent = secondNumber;
+    document.getElementById('partA').textContent = firstNumber;
+    document.getElementById('partB').textContent = secondNumber;
 
 }
 
@@ -148,6 +150,11 @@ timerDisplayNovice.onclick = function () {
     let time = 80, // time in seconds here
         display = document.querySelector('#timerDisplayNovice');
     startTimer(time, display);
+    timers = document.querySelectorAll('.timer');
+    console.log("timers", timers);
+    timers.forEach((timer) => {        
+        timer.setAttribute("disabled", "");
+    });
 };
 
 /**
@@ -158,6 +165,11 @@ timerDisplayIntermediate.onclick = function () {
     let time = 40, // time in seconds here
         display = document.querySelector('#timerDisplayIntermediate');
     startTimer(time, display);
+    timers = document.querySelectorAll('.timer');
+    console.log("timers", timers);
+    timers.forEach((timer) => {        
+        timer.setAttribute("disabled", "");
+    });
 };
 
 /**
@@ -168,6 +180,11 @@ timerDisplayAdvanced.onclick = function () {
     let time = 20, // time in seconds here
         display = document.querySelector('#timerDisplayAdvanced');
     startTimer(time, display);
+    timers = document.querySelectorAll('.timer');
+    console.log("timers", timers);
+    timers.forEach((timer) => {        
+        timer.setAttribute("disabled", "");
+    });
 };
 
 // ADDITION PAGE
